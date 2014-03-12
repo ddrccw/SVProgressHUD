@@ -1,0 +1,2 @@
+platform :ios, '6.0'
+pod 'CCCircleSpinLayer', :podspec => 'https://raw.github.com/ddrccw/CCCircleSpinLayer/master/CCCircleSpinLayer.podspec'

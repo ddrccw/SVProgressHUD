@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SVProgressHUD.h"
+#import <CCCircleSpinLayer.h>
 
 @implementation ViewController
 
@@ -20,6 +21,18 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+    CCCircleSpinLayer *spl = [[CCCircleSpinLayer alloc] initWithFrame:CGRectMake(0, 0, 50, 50)
+                                                                color:[UIColor blueColor]
+                                                             animated:YES];
+#else
+    CCCircleSpinLayer *spl = [[CCCircleSpinLayer alloc] initWithFrame:CGRectMake(0, 0, 50, 50)
+                                                                color:[UIColor whiteColor]
+                                                             animated:YES];
+#endif
+    spl.backgroundColor = [UIColor clearColor].CGColor;
+    [SVProgressHUD sharedView].indefiniteAnimatedLayer = spl;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleNotification:)

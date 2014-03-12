@@ -41,7 +41,7 @@ static const CGFloat SVProgressHUDRingThickness = 6;
 @property (nonatomic, strong) UIView *hudView;
 @property (nonatomic, strong) UILabel *stringLabel;
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) CALayer *indefiniteAnimatedLayer;
+//@property (nonatomic, strong) CALayer *indefiniteAnimatedLayer;
 
 @property (nonatomic, readwrite) CGFloat progress;
 @property (nonatomic, readwrite) NSUInteger activityCount;
