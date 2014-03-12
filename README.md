@@ -1,5 +1,12 @@
 # SVProgressHUD
 
+//2014-3-12
+### What I have done
+* expose indefiniteAnimatedLayer
+* support ios 6 and above
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 SVProgressHUD is a clean and easy-to-use HUD meant to display the progress of an ongoing task.
 
 ![SVProgressHUD-iOS7](http://f.cl.ly/items/1U0T1W0q0u2Z213k1n0o/SVProgressHUD.png)
