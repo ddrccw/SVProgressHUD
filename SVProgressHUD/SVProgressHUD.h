@@ -29,16 +29,18 @@ typedef NSUInteger SVProgressHUDMaskType;
 
 @interface SVProgressHUD : UIView
 
+#pragma mark - Customization
 + (SVProgressHUD*)sharedView;
+@property (nonatomic, strong) CALayer *customizedIndefiniteAnimatedLayer;
 
-@property (nonatomic, strong) UIFont *statusFont;
-@property (nonatomic, strong) UIImage *successImage;
-@property (nonatomic, strong) UIImage *errorImage;
-@property (nonatomic, strong) UIColor *backgroundColor;
-@property (nonatomic, strong) CALayer *indefiniteAnimatedLayer;
++ (void)setBackgroundColor:(UIColor*)color; // default is [UIColor whiteColor]
++ (void)setForegroundColor:(UIColor*)color; // default is [UIColor blackColor]
++ (void)setRingThickness:(CGFloat)width; // default is 4 pt
++ (void)setFont:(UIFont*)font; // default is [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]
++ (void)setSuccessImage:(UIImage*)image; // default is bundled success image from Glyphish
++ (void)setErrorImage:(UIImage*)image; // default is bundled error image from Glyphish
 
-+ (void)setOffsetFromCenter:(UIOffset)offset;
-+ (void)resetOffsetFromCenter;
+#pragma mark - Show Methods
 
 + (void)show;
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType;
@@ -55,6 +57,9 @@ typedef NSUInteger SVProgressHUDMaskType;
 + (void)showSuccessWithStatus:(NSString*)string;
 + (void)showErrorWithStatus:(NSString *)string;
 + (void)showImage:(UIImage*)image status:(NSString*)status; // use 28x28 white pngs
+
++ (void)setOffsetFromCenter:(UIOffset)offset;
++ (void)resetOffsetFromCenter;
 
 + (void)popActivity;
 + (void)dismiss;

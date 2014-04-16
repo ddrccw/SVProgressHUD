@@ -32,7 +32,7 @@
                                                              animated:YES];
 #endif
     spl.backgroundColor = [UIColor clearColor].CGColor;
-    [SVProgressHUD sharedView].indefiniteAnimatedLayer = spl;
+    [SVProgressHUD sharedView].customizedIndefiniteAnimatedLayer = spl;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleNotification:)
@@ -65,7 +65,7 @@
 #pragma mark Show Methods Sample
 
 - (void)show {
-	[SVProgressHUD show];
+	[SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeNone];
 }
 
 - (void)showWithStatus {
