@@ -558,7 +558,7 @@ static const CGFloat SVProgressHUDRingRadius = 14;
         
         [UIView animateWithDuration:0.15
                               delay:0
-                            options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut | UIViewAnimationOptionBeginFromCurrentState
+                            options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut
                          animations:^{
                              self.hudView.transform = CGAffineTransformScale(self.hudView.transform, 1/1.3, 1/1.3);
                              
