@@ -28,6 +28,8 @@ typedef NS_ENUM(NSUInteger, SVProgressHUDMaskType) {
 @interface SVProgressHUD : UIView
 
 #pragma mark - Customization
++ (SVProgressHUD*)sharedView;
+@property (nonatomic, strong) CALayer *customizedIndefiniteAnimatedLayer;
 
 + (void)setBackgroundColor:(UIColor*)color; // default is [UIColor whiteColor]
 + (void)setForegroundColor:(UIColor*)color; // default is [UIColor blackColor]
@@ -71,4 +73,5 @@ typedef NS_ENUM(NSUInteger, SVProgressHUDMaskType) {
 @property (nonatomic, assign) CGFloat radius;
 @property (nonatomic, strong) UIColor *strokeColor;
 
+- (id)initWithFrame:(CGRect)frame customizedIndefiniteAnimatedLayer:(CALayer *)customizedIndefiniteAnimatedLayer;
 @end
